@@ -57,6 +57,7 @@ const config = {
           black: "hsl(var(--lagos-black))",
           cyan: "hsl(var(--lagos-cyan))",
           neon: "hsl(var(--lagos-neon))",
+          white: "hsl(var(--lagos-white))",
         },
         gradient: {
           start: "hsl(var(--gradient-start))",
