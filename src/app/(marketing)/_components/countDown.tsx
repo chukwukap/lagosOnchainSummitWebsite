@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 
 interface CountdownProps {
@@ -23,12 +25,12 @@ const Countdown: React.FC<CountdownProps> = ({ deadline }) => {
   }
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearTimeout(timer);
-  });
+    return () => clearInterval(timer);
+  }, [deadline]);
 
   const formatTime = (time: number) => {
     return time < 10 ? `0${time}` : time;
