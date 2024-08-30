@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 
 import Logo from "@/components/ui/logo";
+import Gutter from "../common/gutter";
 
 interface BaseHeaderProps {
   children?: React.ReactNode;
@@ -12,7 +13,7 @@ interface BaseHeaderProps {
 const MainHeader: React.FC<BaseHeaderProps> = () => {
   return (
     <header className="bg-transparent shadow-sm ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1 flex justify-between  gap-2 md:gap-0 items-center bg-transparent backdrop-blur-md ">
+      <Gutter className=" flex justify-between  gap-2 md:gap-0 items-center bg-transparent backdrop-blur-md ">
         <Link href="/">
           <Logo />
         </Link>
@@ -42,7 +43,7 @@ const MainHeader: React.FC<BaseHeaderProps> = () => {
             Register now
           </Button>
         </div>
-      </div>
+      </Gutter>
     </header>
   );
 };
