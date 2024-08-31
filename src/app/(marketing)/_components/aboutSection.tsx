@@ -16,30 +16,54 @@ export default function AboutSection() {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            pariatur.
           </p>
           <p className="text-sm md:text-base mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button className="w-full sm:w-auto">Register now</Button>
-            <Button className="w-full sm:w-auto">Be a Sponsor</Button>
+            <Button className="w-full sm:w-auto bg-none text-lagos-white bg-lagos-blue ">
+              Be a Sponsor
+            </Button>
           </div>
         </div>
-        <div className="relative w-full h-64 md:h-80 lg:h-full mt-8 lg:mt-0">
-          <Image
-            src="/assets/images/about.png"
-            alt="about"
-            fill
-            className="object-cover rounded-lg"
-          />
+        <div className="grid grid-cols-2 gap-2">
+          <div className="relative aspect-square">
+            <Image
+              src="/assets/images/heroBg.png"
+              alt="about 1"
+              fill
+              className="object-cover rounded-t-full"
+            />
+          </div>
+          <div className="relative aspect-square">
+            <Image
+              src="/assets/images/heroBg.png"
+              alt="about 2"
+              fill
+              className="object-cover rounded-t-full"
+            />
+          </div>
+          <div className="relative aspect-square">
+            <Image
+              src="/assets/images/heroBg.png"
+              alt="about 3"
+              fill
+              className="object-cover rounded-b-full"
+            />
+          </div>
+          <div className="relative aspect-square">
+            <Image
+              src="/assets/images/heroBg.png"
+              alt="about 4"
+              fill
+              className="object-cover rounded-b-full"
+            />
+          </div>
         </div>
       </div>
     </Gutter>

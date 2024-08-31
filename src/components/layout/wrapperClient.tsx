@@ -8,7 +8,7 @@ export default function WrapperClient({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen w-full border-red-500 border-2 ">
+    <div className="min-h-screen w-full border-red-500 border-2d ">
       <MainHeader />
       {children}
       <MainFooter />
