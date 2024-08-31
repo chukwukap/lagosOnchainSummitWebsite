@@ -1,3 +1,4 @@
+import { ContestForm } from "@/components/forms/contestForm";
 import AboutSection from "./_components/aboutSection";
 import ContestSection from "./_components/contestSection";
 import CTASection from "./_components/ctaSection";
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <main className="">
       <HeroSection />
+      <ContestForm />
       <SponsorsSection />
       <AboutSection />
       <ContestSection />

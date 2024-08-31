@@ -6,12 +6,12 @@ export default function CTASection() {
   return (
     <Gutter className="py-24">
       <section className="w-full flex flex-col lg:flex-row gap-12 lg:gap-20 items-center bg-gradient-to-r from-[#7A7A7A] via-[#474747] to-[#141414] rounded-3xl p-8 lg:p-12">
-        <div className="relative w-full lg:w-1/3 aspect-[4/3] rounded-3xl overflow-hidden">
+        <div className="relative w-full lg:w-1/3 aspect-square overflow-hidden">
           <Image
-            src="/assets/images/ctaImage.png"
+            src="/assets/images/heroBg.png"
             fill
             alt="Lagos Onchain Summit"
-            className="object-contain"
+            className="object-cover rounded-t-[30%] "
           />
         </div>
         <div className="flex-1 text-center lg:text-left">

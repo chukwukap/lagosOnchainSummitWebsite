@@ -37,7 +37,7 @@ export default function AboutSection() {
               src="/assets/images/heroBg.png"
               alt="about 1"
               fill
-              className="object-cover rounded-t-full"
+              className="object-cover rounded-t-[30%]"
             />
           </div>
           <div className="relative aspect-square">
@@ -45,7 +45,7 @@ export default function AboutSection() {
               src="/assets/images/heroBg.png"
               alt="about 2"
               fill
-              className="object-cover rounded-t-full"
+              className="object-cover rounded-t-[30%]"
             />
           </div>
           <div className="relative aspect-square">
@@ -53,7 +53,7 @@ export default function AboutSection() {
               src="/assets/images/heroBg.png"
               alt="about 3"
               fill
-              className="object-cover rounded-b-full"
+              className="object-cover rounded-b-[30%]"
             />
           </div>
           <div className="relative aspect-square">
@@ -61,7 +61,7 @@ export default function AboutSection() {
               src="/assets/images/heroBg.png"
               alt="about 4"
               fill
-              className="object-cover rounded-b-full"
+              className="object-cover rounded-b-[30%]"
             />
           </div>
         </div>
