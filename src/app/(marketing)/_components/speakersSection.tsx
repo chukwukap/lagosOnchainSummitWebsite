@@ -59,9 +59,9 @@ export default function SpeakersSection() {
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {speakers.map((speaker) => (
-          <SpeakerCard key={speaker.name} speaker={speaker} />
-        ))}
+        {speakers.map((speaker) => {
+          return <SpeakerCard key={speaker.name} speaker={speaker} />;
+        })}
       </div>
     </Gutter>
   );
@@ -69,17 +69,16 @@ export default function SpeakersSection() {
 
 const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
   return (
-    <div className="group relative overflow-hidden rounded-t-3xl rounded-bl-3xl">
-      <div className="aspect-w-3 aspect-h-4 relative">
+    <div className="">
+      <div className="aspect-[3/4] relative ">
         <Image
           src={speaker.image}
           alt={speaker.name}
           fill
-          className="object-cover transition-transform duration-300 group-hover:scale-110"
+          className="object-cover rounded-3xl border-b-[4px] shadow-lg"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
-      <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+      <div className="p-4 text-white text-center ">
         <h3 className="text-xl font-bold">{speaker.name}</h3>
         <p className="text-sm">{speaker.title}</p>
       </div>
