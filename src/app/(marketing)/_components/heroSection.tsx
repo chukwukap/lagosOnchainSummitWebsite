@@ -27,10 +27,9 @@ export default function HeroSection() {
           <Countdown deadline={new Date("2024-09-20")} />
         </div>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button className="w-full sm:w-auto px-8 py-3">Register now</Button>
-          <Button className="w-full sm:w-auto px-8 py-3">Be a Sponsor</Button>
-          <Button className="w-full sm:w-auto px-8 py-3" variant="outline">
-            Claim points
+          <Button className="w-full sm:w-auto px-8 py-3">Claim points</Button>
+          <Button className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-[#2044FF] via-[#3556FF] to-[#4A67FF] text-lagos-white">
+            Register now
           </Button>
         </div>
       </Gutter>
