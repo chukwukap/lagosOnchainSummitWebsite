@@ -61,13 +61,6 @@ export function ContestForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <h2 className="text-2xl font-bold mb-4">
-          Let&apos;s get you in the contest!
-        </h2>
-        <p className="text-lg mb-6">
-          Enter your details to join our ongoing contest.
-        </p>
-
         <FormField
           control={form.control}
           name="fullName"

@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <main className="">
       <HeroSection />
-      {/* <ContestForm /> */}
       <SponsorsSection />
       <AboutSection />
       <ContestSection />

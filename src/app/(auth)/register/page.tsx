@@ -4,7 +4,6 @@ import { ContestForm } from "@/components/forms/contestForm";
 export default function Register() {
   return (
     <div className="flex min-h-screen">
-      {/* Image column - hidden on small screens, visible on md and up */}
       <div className="hidden md:flex md:w-1/2 bg-lagos-cyan relative">
         <Image
           src="/assets/images/authImage.png"
@@ -16,8 +15,29 @@ export default function Register() {
       </div>
 
       <div className="w-full md:w-1/2 flex items-center justify-center p-8 bg-lagos-black">
-        <div className="w-full max-w-md">
+        <div className="w-full max-w-md space-y-8">
+          <div className="">
+            <h2 className="text-2xl font-bold mb-4">
+              Let&apos;s get you in the contest!
+            </h2>
+            <p className="text-lg mb-6">
+              Enter your details to join our ongoing contest.
+            </p>
+          </div>
+
           <ContestForm />
+
+          <div className="text-center mt-8">
+            <p className="text-sm text-lagos-gray-400">
+              Already registered?{" "}
+              <a
+                href="#"
+                className="font-medium text-lagos-cyan hover:text-lagos-cyan-light"
+              >
+                Sign in
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
