@@ -64,6 +64,10 @@ const config = {
           end: "hsl(var(--gradient-end))",
         },
       },
+      backgroundImage: {
+        "blue-horizon":
+          "linear-gradient(90deg, #2044FF 30.5%, #3556FF 65.5%, #4A67FF 100%)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

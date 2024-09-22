@@ -8,26 +8,28 @@ export default function AboutSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <div className="flex flex-col justify-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            About The Event
+            About The OnChain Summit
           </h1>
           <p className="text-sm md:text-base mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+            The OnChain Summit is Lagos premier blockchain event, bringing
+            together the brightest minds in the Web3 ecosystem. Our mission is
+            to accelerate blockchain adoption and innovation in Africa. This
+            two-day conference features keynote speeches, panel discussions, and
+            workshops led by industry pioneers and thought leaders from around
+            the globe.
           </p>
           <p className="text-sm md:text-base mb-8">
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua.
+            Whether you&apos;re a developer, entrepreneur, investor, or simply
+            curious about blockchain technology, the OnChain Summit offers
+            unparalleled networking opportunities and insights into the latest
+            trends and developments in decentralized finance, NFTs, DAOs, and
+            more. Join us as we explore the transformative potential of
+            blockchain technology and its impact on various industries.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button className="w-full sm:w-auto">Register now</Button>
-            <Button className="w-full sm:w-auto bg-none text-lagos-white bg-lagos-blue ">
-              Be a Sponsor
+            <Button className="w-full sm:w-auto">Register Now</Button>
+            <Button className="w-full sm:w-auto bg-none text-lagos-white bg-lagos-blue">
+              Become a Sponsor
             </Button>
           </div>
         </div>

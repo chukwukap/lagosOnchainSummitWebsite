@@ -89,9 +89,11 @@ const MainHeader: React.FC<BaseHeaderProps> = () => {
                 Support +234 8101314508
               </span>
             </div>
-            <Button className="bg-gradient-to-b from-[#84FFE1] to-[#04E3AC] text-lagos-black hover:opacity-90 transition-opacity">
-              Register now
-            </Button>
+            <Link href={"/register"}>
+              <Button className="bg-gradient-to-b from-[#84FFE1] to-[#04E3AC] text-lagos-black hover:opacity-90 transition-opacity">
+                Register now
+              </Button>
+            </Link>
           </div>
           <button className="md:hidden text-lagos-white" onClick={toggleMenu}>
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -130,9 +132,11 @@ const MainHeader: React.FC<BaseHeaderProps> = () => {
                     Support +234 8101314508
                   </span>
                 </div>
-                <Button className="bg-gradient-to-b from-[#84FFE1] to-[#04E3AC] text-lagos-black hover:opacity-90 transition-opacity">
-                  Register now
-                </Button>
+                <Link href={"/register"}>
+                  <Button className="bg-gradient-to-b from-[#84FFE1] to-[#04E3AC] text-lagos-black hover:opacity-90 transition-opacity">
+                    Register now
+                  </Button>
+                </Link>
               </div>
             </Gutter>
           </div>
