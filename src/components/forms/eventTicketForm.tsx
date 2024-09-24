@@ -1,7 +1,10 @@
+"use client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   Form,
   FormControl,
@@ -18,6 +21,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { toast } from "sonner";
+import { Role } from "@prisma/client";
 
 const formSchema = z.object({
   fullName: z.string().min(2, {
@@ -34,8 +39,8 @@ const formSchema = z.object({
   }),
   telegramId: z.string().optional(),
   twitterHandle: z.string().optional(),
-  role: z.string().min(1, {
-    message: "Please select your role.",
+  role: z.nativeEnum(Role, {
+    errorMap: () => ({ message: "Please select a valid role." }),
   }),
 });
 
@@ -49,25 +54,51 @@ export function EventTicketForm() {
       country: "",
       telegramId: "",
       twitterHandle: "",
-      role: "",
+      role: undefined,
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    // Handle form submission here
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/tickets", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        if (data.error === "A ticket with this email already exists") {
+          toast.error("You have already registered for this event.");
+        } else {
+          throw new Error(data.error || "Failed to submit form");
+        }
+      } else {
+        toast.success("Registration successful!");
+        router.push("/registration-success");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      if (error instanceof Error) {
+        toast.error(`Registration failed: ${error.message}`);
+      } else {
+        toast.error("An unexpected error occurred. Please try again.");
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-2">Register</h2>
-          <p className="text-lg text-gray-600">
-            Enter your details to join the Lagos Onchain Summit.
-          </p>
-        </div>
-
         <FormField
           control={form.control}
           name="fullName"
@@ -185,18 +216,18 @@ export function EventTicketForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Role</FormLabel>
-              <Select onValueChange={field.onChange}>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
                     <SelectValue placeholder="Select your role" />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="developer">Developer</SelectItem>
-                  <SelectItem value="investor">Investor</SelectItem>
-                  <SelectItem value="entrepreneur">Entrepreneur</SelectItem>
-                  <SelectItem value="student">Student</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
+                  {Object.values(Role).map((role) => (
+                    <SelectItem key={role} value={role}>
+                      {role.charAt(0) + role.slice(1).toLowerCase()}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
               <FormMessage />
@@ -204,8 +235,8 @@ export function EventTicketForm() {
           )}
         />
 
-        <Button type="submit" className="w-full">
-          Register nows
+        <Button type="submit" className="w-full" disabled={isSubmitting}>
+          {isSubmitting ? "Submitting..." : "Register now"}
         </Button>
       </form>
     </Form>

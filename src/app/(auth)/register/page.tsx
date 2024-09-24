@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ContestForm } from "@/components/forms/contestForm";
+import { EventTicketForm } from "@/components/forms/eventTicketForm";
 
 export default function Register() {
   return (
@@ -17,17 +18,14 @@ export default function Register() {
       <div className="w-full md:w-1/2 flex items-center justify-center p-8 bg-lagos-black">
         <div className="w-full max-w-md space-y-8">
           <div className="">
-            <h2 className="text-2xl font-bold mb-4">
-              Let&apos;s get you in the contest!
-            </h2>
+            <h2 className="text-2xl font-bold mb-4">Register </h2>
             <p className="text-lg mb-6">
-              Enter your details to join our ongoing contest.
+              Enter your details to join the Lagos Onhain Summit.{" "}
             </p>
           </div>
 
-          <ContestForm />
-
-          <div className="text-center mt-8">
+          <EventTicketForm />
+          {/* <div className="text-center mt-8">
             <p className="text-sm text-lagos-gray-400">
               Already registered?{" "}
               <a
@@ -37,7 +35,7 @@ export default function Register() {
                 Sign in
               </a>
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
