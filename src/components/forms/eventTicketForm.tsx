@@ -236,7 +236,7 @@ export function EventTicketForm() {
         />
 
         <Button type="submit" className="w-full" disabled={isSubmitting}>
-          {isSubmitting ? "Submitting..." : "Register now"}
+          {isSubmitting ? "Registering..." : "Register now"}
         </Button>
       </form>
     </Form>
