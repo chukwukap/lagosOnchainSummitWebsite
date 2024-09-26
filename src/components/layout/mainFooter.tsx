@@ -18,6 +18,23 @@ const quickLinks = [
   { name: "Support", href: "/support" },
 ];
 
+const developers = [
+  {
+    name: "Chukwuka Uba",
+    role: "Lead Developer",
+    github: "https://github.com/chukwukap",
+    website: "https://chukwuka.xyz",
+    twitter: "https://x.com/chukwukadefi", // Replace with actual Twitter link
+  },
+  // {
+  //   name: "Web3Bridge",
+  //   role: "Development Team",
+  //   website: "https://www.web3bridge.com/",
+  //   twitter: "https://twitter.com/Web3Bridge", // Replace with actual Twitter link
+  // },
+  // Add more developers as needed
+];
+
 export default function MainFooter() {
   return (
     <footer className="bg-lagos-black text-white py-16">
@@ -85,23 +102,80 @@ export default function MainFooter() {
             </div>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-white/20 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-white/80">
-            &copy; 2024 Lagos Onchain Summit. All rights reserved.
-          </p>
-          <div className="flex gap-4 text-sm">
-            <Link
-              href="/privacy-policy"
-              className="text-white/80 hover:text-white transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms-of-service"
-              className="text-white/80 hover:text-white transition-colors"
-            >
-              Terms of Service
-            </Link>
+        <div className="mt-12 pt-8 border-t border-white/20 flex flex-col gap-4">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-white/80">
+              &copy; 2024 Lagos Onchain Summit. All rights reserved.
+            </p>
+            <div className="flex gap-4 text-sm">
+              <Link
+                href="/privacy-policy"
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms-of-service"
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                Terms of Service
+              </Link>
+            </div>
+          </div>
+          <div className="text-sm text-white/60">
+            <p>Built with ❤️ by:</p>
+            <ul className="flex flex-wrap gap-4 mt-2">
+              {developers.map((dev) => (
+                <li key={dev.name} className="flex items-center gap-2">
+                  <span>{dev.name}</span>
+                  {dev.github && (
+                    <a
+                      href={dev.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lagos-cyan hover:text-lagos-cyan-light transition-colors"
+                    >
+                      <Image
+                        src="/assets/icons/svg/github.svg"
+                        alt="GitHub"
+                        width={16}
+                        height={16}
+                      />
+                    </a>
+                  )}
+                  {dev.twitter && (
+                    <a
+                      href={dev.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lagos-cyan hover:text-lagos-cyan-light transition-colors"
+                    >
+                      <Image
+                        src="/assets/icons/svg/twitter.svg"
+                        alt="Twitter"
+                        width={16}
+                        height={16}
+                      />
+                    </a>
+                  )}
+                  {dev.website && (
+                    <a
+                      href={dev.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lagos-cyan hover:text-lagos-cyan-light transition-colors"
+                    >
+                      <Image
+                        src="/assets/icons/svg/website.svg"
+                        alt="Website"
+                        width={16}
+                        height={16}
+                      />
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </Gutter>
