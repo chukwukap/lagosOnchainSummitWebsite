@@ -33,7 +33,7 @@ const Countdown: React.FC<CountdownProps> = ({ deadline }) => {
   }, [deadline]);
 
   return (
-    <div className="flex space-x-4 bg-lagos-black text-white p-6 rounded-xl text-4xl font-bold ">
+    <div className="gradient-shadow flex space-x-4 bg-lagos-black text-white p-6 rounded-xl text-4xl font-bold">
       <CountdownBox value={timeLeft.days} label="Days" />
       <CountdownBox value={timeLeft.hours} label="Hours" />
       <CountdownBox value={timeLeft.minutes} label="Minutes" />
@@ -48,7 +48,7 @@ interface CountdownBoxProps {
 
 const CountdownBox: React.FC<CountdownBoxProps> = ({ value, label }) => {
   return (
-    <div className="flex flex-col items-center ">
+    <div className="flex flex-col items-center p-4">
       <div className=" ">{value.toString().padStart(2, "0")}</div>
       <div className="text-sm mt-2 text-white">{label}</div>
     </div>

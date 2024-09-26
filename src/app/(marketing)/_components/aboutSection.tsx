@@ -11,20 +11,15 @@ export default function AboutSection() {
             About The OnChain Summit
           </h1>
           <p className="text-sm md:text-base mb-8">
-            The OnChain Summit is Lagos premier blockchain event, bringing
-            together the brightest minds in the Web3 ecosystem. Our mission is
-            to accelerate blockchain adoption and innovation in Africa. This
-            two-day conference features keynote speeches, panel discussions, and
-            workshops led by industry pioneers and thought leaders from around
-            the globe.
+            Discover the future of technology and innovation at a groundbreaking
+            event bringing together blockchain enthusiasts, developers,
+            entrepreneurs, and changemakers.
           </p>
           <p className="text-sm md:text-base mb-8">
-            Whether you&apos;re a developer, entrepreneur, investor, or simply
-            curious about blockchain technology, the OnChain Summit offers
-            unparalleled networking opportunities and insights into the latest
-            trends and developments in decentralized finance, NFTs, DAOs, and
-            more. Join us as we explore the transformative potential of
-            blockchain technology and its impact on various industries.
+            This unique gathering offers a platform to explore the limitless
+            potential of decentralized technology, featuring keynotes from
+            industry leaders, immersive workshops, and engaging panel
+            discussions focused on Web3, DeFi, and blockchain advancements.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button className="w-full sm:w-auto">Register Now</Button>
