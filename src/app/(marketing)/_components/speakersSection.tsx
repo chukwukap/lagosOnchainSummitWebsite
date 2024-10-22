@@ -9,23 +9,20 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
+    name: "Ugochukwu Aronu.",
+    title: "CEO/Co-founder, Asset Chain",
+    image: "/assets/images/speakers/ugo.jpeg",
+  },
+  {
     name: "David Salami",
     title: "Co-founder Hyperbridge",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    image: "/assets/images/speakers/david.jpg",
   },
-  {
-    name: "Ugochukwu Aronu.",
-    title: "Founder, Xend Finance",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-  },
-  {
-    name: "Alex Johnson",
-    title: "DeFi Expert",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-  },
+  // {
+  //   name: "Alex Johnson",
+  //   title: "DeFi Expert",
+  //   image: "/assets/images/speakers/alex.jpeg",
+  // },
 ];
 
 export default function SpeakersSection() {
