@@ -27,7 +27,7 @@ export default function HeroSection() {
           </p>
         </div>
         <div className="mb-8">
-          <Countdown deadline={new Date("2024-10-20")} />
+          <Countdown deadline={new Date("2024-11-30")} />
         </div>
         <div className="flex flex-col sm:flex-row gap-4">
           <Button className="w-full sm:w-auto px-8 py-3" disabled>
