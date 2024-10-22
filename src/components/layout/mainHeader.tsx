@@ -96,7 +96,7 @@ const MainHeader: React.FC = () => {
               alt="phone icon"
             />
             <span className="text-sm text-lagos-white">
-              Support +234 8101314508
+              Support +234 907 250 9898
             </span>
           </div>
           <Link href={"/register"}>
