@@ -9,14 +9,14 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
-    name: "John Doe",
-    title: "Blockchain Developer",
+    name: "David Salami",
+    title: "Co-founder Hyperbridge",
     image:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
   },
   {
-    name: "Jane Smith",
-    title: "Crypto Analyst",
+    name: "Ugochukwu Aronu.",
+    title: "Founder, Xend Finance",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
   },
@@ -25,24 +25,6 @@ const speakers: Speaker[] = [
     title: "DeFi Expert",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-  },
-  {
-    name: "Emily Brown",
-    title: "NFT Artist",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
-  },
-  {
-    name: "Michael Lee",
-    title: "Smart Contract Auditor",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-  },
-  {
-    name: "Sarah Wilson",
-    title: "Crypto Journalist",
-    image:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop",
   },
 ];
 

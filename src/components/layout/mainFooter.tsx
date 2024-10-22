@@ -5,10 +5,26 @@ import Link from "next/link";
 import Gutter from "../common/gutter";
 
 const socialLinks = [
-  { name: "LinkedIn", icon: "/assets/icons/svg/whatsapp.svg" },
-  { name: "Twitter", icon: "/assets/icons/svg/twitter.svg" },
-  { name: "Facebook", icon: "/assets/icons/svg/facebook.svg" },
-  { name: "Instagram", icon: "/assets/icons/svg/instagram.svg" },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/lagos-onchain-summit/",
+    icon: "/assets/icons/svg/whatsapp.svg",
+  },
+  {
+    name: "Twitter",
+    href: "https://x.com/LagosOnchain",
+    icon: "/assets/icons/svg/twitter.svg",
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/LagosOnchainSummit",
+    icon: "/assets/icons/svg/facebook.svg",
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/lagosonchain_/profilecard/?igsh=ODR6eHg3NHZ6bGVy",
+    icon: "/assets/icons/svg/instagram.svg",
+  },
 ];
 
 const quickLinks = [
@@ -50,7 +66,7 @@ export default function MainFooter() {
               {socialLinks.map((link) => (
                 <a
                   key={link.name}
-                  href="#"
+                  href={link.href}
                   className="w-8 h-8 relative transition-transform hover:scale-110"
                 >
                   <Image src={link.icon} alt={link.name} fill />
@@ -90,15 +106,20 @@ export default function MainFooter() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Get Involved</h3>
             <div className="space-y-4">
-              <Button className="w-full bg-lagos-cyan text-lagos-black hover:bg-lagos-cyan/90">
-                Register now
-              </Button>
-              <Button
-                variant="outline"
-                className="w-full border-lagos-cyan text-lagos-cyan hover:bg-lagos-cyan hover:text-lagos-black"
-              >
-                Be a Sponsor
-              </Button>
+              <Link href="/register" aria-label="Register now">
+                <Button className="w-full bg-lagos-cyan text-lagos-black hover:bg-lagos-cyan/90">
+                  Register now
+                </Button>
+              </Link>
+              <Link href="/sponsor" aria-label="Be a Sponsor">
+                <Button
+                  disabled
+                  variant="outline"
+                  className="w-full border-lagos-cyan text-lagos-cyan hover:bg-lagos-cyan hover:text-lagos-black"
+                >
+                  Be a Sponsor
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
