@@ -58,8 +58,8 @@ const MainHeader: React.FC = () => {
         ref={headerRef}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-lagos-black bg-opacity-80 backdrop-blur-md"
-            : "bg-transparent"
+            ? "bg-[rgba(0,0,0,0.3)] backdrop-blur-md border-b border-[rgba(255,255,255,0.1)]"
+            : "bg-[rgba(0,0,0,0.1)] backdrop-blur-sm"
         }`}
       >
         <Gutter className="flex justify-between items-center h-20">
@@ -90,7 +90,7 @@ const MainHeader: React.FC = () => {
               ))}
             </ul>
           </nav>
-          <div className="hidden md:flex gap-6 items-center border-l-2 border-lagos-white pl-4">
+          <div className="hidden md:flex gap-6 items-center border-l-2 border-[rgba(255,255,255,0.2)] pl-4">
             <div className="flex items-center gap-2">
               <Image
                 src="/assets/icons/svg/phone.svg"
@@ -115,7 +115,7 @@ const MainHeader: React.FC = () => {
         {isMenuOpen && (
           <div
             ref={menuRef}
-            className="md:hidden bg-lagos-black bg-opacity-95 backdrop-blur-md"
+            className="md:hidden bg-[rgba(0,0,0,0.8)] backdrop-blur-lg border-t border-[rgba(255,255,255,0.1)]"
           >
             <Gutter>
               <nav className="py-4">
@@ -146,7 +146,7 @@ const MainHeader: React.FC = () => {
                   ))}
                 </ul>
               </nav>
-              <div className="flex flex-col gap-4 py-4 border-t border-lagos-white/20">
+              <div className="flex flex-col gap-4 py-4 border-t border-[rgba(255,255,255,0.1)]">
                 <div className="flex items-center gap-2">
                   <Image
                     src="/assets/icons/svg/phone.svg"
