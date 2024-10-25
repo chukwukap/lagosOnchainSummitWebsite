@@ -69,14 +69,22 @@ const SponsorsSection = () => {
 
   return (
     <Gutter className="py-20">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[hsl(var(--lagos-blue))] to-[hsl(var(--lagos-cyan))] bg-clip-text text-transparent">
-          Sponsors and Partners
-        </h2>
-        <p className="text-lg text-[hsl(var(--lagos-white))] max-w-2xl mx-auto">
-          We&apos;re proud to partner with leading organizations in the
-          blockchain space
-        </p>
+      <div className="text-center mb-16 relative">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[hsl(var(--lagos-blue)_/_0.1)] rounded-full blur-[100px] animate-pulse" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[hsl(var(--lagos-cyan)_/_0.1)] rounded-full blur-[100px] animate-pulse delay-1000" />
+        </div>
+
+        <div className="relative z-10 ">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[hsl(var(--lagos-white))] via-[hsl(var(--lagos-cyan))] to-[hsl(var(--lagos-neon))] bg-clip-text text-transparent">
+            Our Valued Sponsors and Partners
+          </h2>
+          <p className="text-lg text-[hsl(var(--lagos-white)_/_0.9)] max-w-2xl mx-auto leading-relaxed">
+            Collaborating with industry leaders to drive blockchain innovation
+            and adoption in Africa
+          </p>
+        </div>
       </div>
 
       <div className="relative group">
