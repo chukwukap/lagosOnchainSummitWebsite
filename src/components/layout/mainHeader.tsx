@@ -11,7 +11,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#speakers", label: "Speakers" },
-  { href: "#agenda", label: "Agenda" },
+  // { href: "#agenda", label: "Agenda" },
   { href: "#", label: "Sponsors Deck", isPDF: true },
 ];
 

@@ -18,11 +18,11 @@ const speakers: Speaker[] = [
     title: "Co-founder Hyperbridge",
     image: "/assets/images/speakers/david.jpg",
   },
-  // {
-  //   name: "Alex Johnson",
-  //   title: "DeFi Expert",
-  //   image: "/assets/images/speakers/alex.jpeg",
-  // },
+  {
+    name: "Jesse Pollak",
+    title: "@base contributor #001",
+    image: "/assets/images/speakers/jesse.png",
+  },
 ];
 
 const SpeakersSection = () => {
