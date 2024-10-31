@@ -11,7 +11,7 @@ const sponsors = [
   },
   { name: "Felbeth", logo: "/assets/images/sponsors/felbeth.png" },
   { name: "Hive", logo: "/assets/images/sponsors/hive.png" },
-  { name: "BattleDogs", logo: "/assets/images/sponsors/community.png" },
+  { name: "BattleDogs", logo: "/assets/images/sponsors/battledogs.png" },
 ];
 
 const SponsorsSection = () => {
