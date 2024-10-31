@@ -20,7 +20,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Jesse Pollak",
-    title: "@base contributor #001",
+    title: "Creator, Base. \n VP of Engineering, Coinbase.",
     image: "/assets/images/speakers/jesse.png",
   },
 ];

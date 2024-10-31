@@ -11,7 +11,7 @@ export default function HeroSection() {
       {/* Background Image with Optimized Loading */}
       <div className="absolute inset-0">
         <Image
-          src="/assets/images/heroBg.png"
+          src="/assets/images/heroBg.jpg"
           alt="Lagos Onchain Summit Background"
           fill
           priority
@@ -60,15 +60,17 @@ export default function HeroSection() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-6 mt-4">
-          <Button
-            size="lg"
-            className="w-full sm:w-auto bg-gradient-to-r from-[hsl(var(--lagos-blue))] to-[hsl(var(--lagos-cyan))] 
+          <Link href="/register">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto bg-gradient-to-r from-[hsl(var(--lagos-blue))] to-[hsl(var(--lagos-cyan))] 
             hover:opacity-90 transition-all duration-300 text-base sm:text-lg font-medium px-8 py-6 
             transform hover:scale-105 hover:shadow-lg hover:shadow-[hsl(var(--lagos-cyan)_/_0.3)]"
-          >
-            Register Now
-          </Button>
-          <Link href="/register">
+            >
+              Register Now
+            </Button>
+          </Link>
+          <Link href="/sponsor">
             <Button
               size="lg"
               variant="outline"
