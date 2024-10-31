@@ -32,10 +32,6 @@ const SpeakersSection = () => {
         <h2 className="text-4xl md:text-5xl xl:text-6xl font-bold mb-6 bg-gradient-to-r from-[hsl(var(--lagos-blue))] via-[hsl(var(--lagos-cyan))] to-[hsl(var(--lagos-neon))] bg-clip-text text-transparent">
           Meet The Speakers
         </h2>
-        <p className="text-lg md:text-xl text-[hsl(var(--lagos-white))] max-w-3xl mx-auto leading-relaxed opacity-90">
-          Join us to hear from these industry leaders shaping the future of
-          blockchain technology.
-        </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">

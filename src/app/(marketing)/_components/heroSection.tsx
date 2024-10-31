@@ -33,7 +33,7 @@ export default function HeroSection() {
         {/* Badge */}
         <div className="inline-flex items-center px-4 py-2 rounded-full bg-[hsl(var(--lagos-cyan)_/_0.1)] border border-[hsl(var(--lagos-cyan)_/_0.2)] backdrop-blur-sm">
           <span className="text-[hsl(var(--lagos-cyan))] text-sm font-medium">
-            November 30th - December 1st, 2024
+            November 29th - November 30th, 2024
           </span>
         </div>
 
@@ -56,7 +56,7 @@ export default function HeroSection() {
         </div>
 
         <div className="backdrop-blur-sm bg-[hsl(var(--lagos-black)_/_0.3)] p-8 rounded-2xl border border-[hsl(var(--lagos-cyan)_/_0.2)]">
-          <Countdown deadline={new Date("2024-11-30")} />
+          <Countdown deadline={new Date("2024-11-29")} />
         </div>
 
         <div className="flex flex-col sm:flex-row gap-6 mt-4">
@@ -74,6 +74,7 @@ export default function HeroSection() {
             <Button
               size="lg"
               variant="outline"
+              disabled
               className="w-full sm:w-auto border-2 border-[hsl(var(--lagos-cyan))] text-[hsl(var(--lagos-cyan)] 
               hover:bg-[hsl(var(--lagos-cyan)_/_0.1)] transition-all duration-300 text-base sm:text-lg font-medium 
               px-8 py-6 transform hover:scale-105 hover:shadow-lg hover:shadow-[hsl(var(--lagos-cyan)_/_0.2)]"
